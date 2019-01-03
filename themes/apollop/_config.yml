@@ -1,0 +1,21 @@
+menu:
+    博客: /
+    归档: /archives/
+    关于我: https://github.com/ZhangQiangQQ/ZhangQiangQQ.github.io/issues/1
+    GitHub: https://github.com/ZhangQiangQQ/
+    Rss: /atom.xml
+
+favicon: /favicon.png
+logo: /favicon.png
+
+# Comment
+# e.g disqus: seansun
+disqus:
+duoshuo:
+
+# Analytics
+# google-analytics:
+# ga: UA-xxxxxxxx-x
+
+# Copyright Infomation
+startyear: 2015
