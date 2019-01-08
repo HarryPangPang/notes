@@ -1,7 +1,7 @@
 ---
 layout: vue中AsyncAwait的使用示例
 title: vue中AsyncAwait的使用示例
-date: 2019-01-07 13:47:23
+date: 2018-12-25 13:47:23
 tags:
 ---
 > 想要await按照预期来执行，就必须是promise

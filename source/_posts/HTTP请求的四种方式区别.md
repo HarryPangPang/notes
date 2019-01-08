@@ -1,7 +1,7 @@
 ---
 layout: postman
 title: HTTP请求的四种方式区别
-date: 2019-01-07 13:46:28
+date: 2018-12-07 13:46:28
 tags:
 ---
 1：form-data
