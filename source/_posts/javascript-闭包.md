@@ -24,12 +24,12 @@ var increment = function () {
 }
 console.log(increment.count);   //undefined
 var counter = increment();
-console.log(counter.inc());
-console.log(counter.inc());
-console.log(counter.inc());
+console.log(counter.inc()); //1
+console.log(counter.inc()); //2
+console.log(counter.inc()); //3
 
 var counter2 = increment();
-console.log(counter2.inc());
+console.log(counter2.inc()); //1
 console.log(counter == counter2);  //false,注:闭包每次返回的对象都不一样!
 
 
