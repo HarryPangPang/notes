@@ -1,7 +1,8 @@
 menu:
     博客: /
     归档: /archives/
-    关于我: https://github.com/ZhangQiangQQ/ZhangQiangQQ.github.io/issues/1
+    # 关于我: https://github.com/ZhangQiangQQ/ZhangQiangQQ.github.io/issues/1
+    关于我: /2019/01/11/关于我
     GitHub: https://github.com/ZhangQiangQQ/
     Rss: /atom.xml
 
