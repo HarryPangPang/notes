@@ -1,6 +1,6 @@
 ---
 layout: react
-title: V16入门手册
+title: React_V16入门手册
 date: 2019-01-18 17:09:19
 tags:
 ---
