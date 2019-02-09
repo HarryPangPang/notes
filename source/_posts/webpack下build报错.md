@@ -93,14 +93,12 @@ ogs\2019-02-09T07_46_04_537Z-debug.log
 
 这里面有两个问题
 1. WARNING in configuration
-> 解决方法：
+> 解决方法：在webpack.config.js下增加mode: 'none'
+module.exports = {
+    mode: 'none',
 
 
-2. ERROR in ./client/App.jsx
-Module build failed (from ./node_modules/_babel-loader@8.0.5@babel-loader/lib/in
-dex.js):
-
-Error: Cannot find module '@babel/core'
+2. Error: Cannot find module '@babel/core'
  babel-loader@8 requires Babel 7.x (the package '@babel/core'). If you'd like to
  use Babel 6.x ('babel-core'), you should install 'babel-loader@7'.
 > 解决方法：npm i babel-loader@7 -D
