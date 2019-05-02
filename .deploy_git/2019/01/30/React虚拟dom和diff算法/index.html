@@ -48,7 +48,7 @@
 <h2 id="虚拟dom中的diff算法"><a href="#虚拟dom中的diff算法" class="headerlink" title="虚拟dom中的diff算法"></a>虚拟dom中的diff算法</h2><p>在上面我们介绍了react中state变化时，dom是如何发生变化的，在第七步中比较原始虚拟dom和新的虚拟dom的区别采用的方法，就是diff算法（diffrence）</p>
 <p>虚拟dom在什么时候会发生比对？没错，数据发生变化时，也就是调用setState时</p>
 <p>react的虚拟dom其实是同级比较的</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/1/30/1689dac3232d3b6d?w=582&amp;h=300&amp;f=png&amp;s=69471" alt=""><br>如上图<br>他的对比步骤如下</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/1/30/1689dac3232d3b6d?w=582&amp;h=300&amp;f=png&amp;s=69471" alt><br>如上图<br>他的对比步骤如下</p>
 <ol>
 <li>红色原始虚拟dom和新的虚拟dom，没有变化，保持不变，往下继续比对</li>
 <li>蓝色原始虚拟dom和新的虚拟dom，没有变化，保持不变，往下继续比对</li>
@@ -58,6 +58,6 @@
 <p>但凡在上面哪一步骤出现不同，就不再继续比对，而是删除下面的全部节点，采用新的虚拟dom(例如：如果红色框的原始虚拟dom和新的虚拟dom不一致，那么就不在进行比对，采用新的虚拟dom来生成dom)</p>
 </blockquote>
 <h4 id="key的作用"><a href="#key的作用" class="headerlink" title="key的作用"></a>key的作用</h4><p>react利用key来识别组件，它是一种身份标识标识，来提高虚拟dom的比对速度看下面</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/1/30/1689dbb06ec80cda?w=477&amp;h=191&amp;f=png&amp;s=7412" alt=""><br>比如我要在abcde中添加一个f</p>
-<p>如果我们没有key值，那我们就需要A比对一遍，B对比一遍，以此类推很好性能，而有了key，就像下面的图一样，我们很快就知道只有f与之前不同，提高了列表渲染的性能<br><img src="https://user-gold-cdn.xitu.io/2019/1/30/1689dbbc688199b4?w=565&amp;h=201&amp;f=png&amp;s=11659" alt=""></p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/1/30/1689dbb06ec80cda?w=477&amp;h=191&amp;f=png&amp;s=7412" alt><br>比如我要在abcde中添加一个f</p>
+<p>如果我们没有key值，那我们就需要A比对一遍，B对比一遍，以此类推很好性能，而有了key，就像下面的图一样，我们很快就知道只有f与之前不同，提高了列表渲染的性能<br><img src="https://user-gold-cdn.xitu.io/2019/1/30/1689dbbc688199b4?w=565&amp;h=201&amp;f=png&amp;s=11659" alt></p>
 </div></article></div></main><footer><div class="paginator"><a href="/2019/02/09/webpack下build报错/" class="prev">PREV</a><a href="/2019/01/27/react生命周期/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2019 <a href="https://github.com/ZhangQiangQQ">Harry Pang</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
