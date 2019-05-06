@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>SoonBook</title>
+		<meta name="description" content="松鼠记账，记账手册，记账时光">
+		<meta name="keywords" content="松鼠记账，记账手册，记账时光">
+		<meta content="telephone=no" name="format-detection" />
+		<meta content="email=no" name="format-detection" />
+		<meta name="author" content="晨曦">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="build/css/style.css">
+		<link rel="shortcut icon" href="img/logo.png">
+	</head>
+<!--IE浏览的的跳转-->
+	<script>
+		var _uat=navigator.userAgent;
+		if(_uat.indexOf("MSIE 6.0")>0){
+			window.location="ROOT/index.html";
+		}
+		else if(_uat.indexOf("MSIE 7.0")>0){
+			window.location="ROOT/index.html";
+		}
+		else if(_uat.indexOf("MSIE 8.0")>0){
+			window.location="ROOT/index.html";
+		}
+		else if(_uat.indexOf("MSIE 9.0")>0){
+			window.location="ROOT/index.html";
+		}
+		else if(_uat.indexOf("MSIE 10.0")>0){
+			window.location="ROOT/index.html";
+		}
+	</script>
+
+	<body class="preload" data-current-section="0">
+		<div id="wrapper">
+			<!--边框，如果没有这部分的话翻页的时候一直是全屏-->
+			<div id="borders">
+				<div class="border hor top"></div>
+				<div class="border hor bot"></div>
+				<div class="border vert left"></div>
+				<div class="border vert right"></div>
+			</div>
+			<!--这里显示的是第一页的那些背景花纹-->
+			<div id="illustration-01">
+				<div class="bottle"></div>
+			</div>
+			<!--必须要存在-->
+			<div id="stripe"></div>
+			<!--这里显示的是那个手机-->
+			<div id="video-container">
+				<video id="video" preload="auto" controls onplay="this.controls=false">
+				</video>
+				<div id="pp">
+					<img src="img/mockup/img1.png" class="slide_img1">
+					<img src="img/mockup/img2.png" class="slide_img2">
+					<img src="img/mockup/img3.png" class="slide_img3">
+					<img src="img/mockup/img4.png" class="slide_img4">
+				</div>
+			</div>
+			<!--这里是翻页时候的那条白线-->
+			<div id="timeline-ctn">
+				<div id="timeline-track">
+					<div id="timeline-bar"></div>
+				</div>
+				 <div id="section-number"></div>
+			</div>
+
+			<header id="header" class="nav-container noselect">
+				<!--第一页的文字-->	
+				<h1 id="logo"><span>S</span><span>O</span><span>O</span><span>N</span><span>B</span><span>O</span><span>O</span><span>K</span></h1>
+				<!--右侧导航部分的按钮-->
+				<nav id="main-nav">
+					<button class="nav-btn up" disabled>Go up<span></span></button>
+					<ul>
+						<li><a href="#search">第一页</a></li>
+						<li><a href="#find">第二页</a></li>
+						<li><a href="#explore">第三页</a></li>
+						<li><a href="#suggest">第四页</a></li>
+						<li><a href="#newsletter">第五页</a></li>
+					</ul>
+					<button class="nav-btn down">Go down<span></span></button>
+				</nav>
+				<!--顶部的下载苹果和安卓部分按钮-->
+				<div id="sub-nav">
+					<ul>
+						<li class="my_li"><a href="javascript:void(0)">Contact us</a></li>
+						<li><a href="https://appsto.re/cn/Nypu7.i" class="download-btn yellow" target="_blank">苹果下载</a></li>
+						<li><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.hejia.squirrelaccountbook" class="download-btn yellow android" target="_blank">安卓下载</a></li>
+					</ul>
+				</div>
+				<img src="img/sslogo.png" alt="松鼠记账LOGO" class="sslogo">
+				<img src="img/jt.png" alt="箭头" class="jt">
+			</header>
+
+			<!--main标签，等同于content页面主内容部分-->
+			<main id="content" role="main">
+
+		<!--第一页底部的文字-->		
+	<section id="home">
+		<p class="tagline">让记账成为一种习惯</p>
+	</section>
+
+	<!--开始翻页-->
+	<div id="sections-list-container">
+		<div class="swiper-container">
+			<ol id="sections-list" class="swiper-wrapper">
+				<li class="swiper-slide">
+					<section id="search">
+						<figure>
+							<img src="img/mockup/img1.png" alt="用心做好一件事 让记账成为一种习惯">
+						</figure>
+						<article>
+							<h2 id="now"></h2>
+							<p class="my_p">用心做好一件事<br>让记账成为一种习惯</p>
+						</article>
+					</section>
+				</li>
+
+				<li class="swiper-slide">
+					<section id="find">
+						<figure>
+							<img src="img/mockup/img2.png" alt="极致的设计 贯穿至微小的类目录图标">
+						</figure>
+
+						<article>
+							<h2></h2>
+							<p class="my_p">极致的设计<br>贯穿至微小的类目录图标</p>
+						</article>
+					</section>
+				</li>
+
+				<li class="swiper-slide">
+					<section id="explore">
+						<figure>
+							<img src="img/mockup/img3.png" alt="最快速的海报式记账体验">
+						</figure>
+						<article>
+							<h2></h2>
+							<p class="my_p">最快速的海报式<br>记账体验</p>
+						</article>
+					</section>
+				</li>
+
+				<li class="swiper-slide">
+					<section id="suggest">
+						<figure>
+							<img src="img/mockup/img4.png" alt="智能记忆的标签式账目分析">
+						</figure>
+						<article id="tx_p">
+							<h2></h2>
+							<p class="my_p">智能记忆的<br>标签式账目分析</p>
+						</article>
+					</section>
+				</li>
+			</ol>
+			<!--手机模式下显示的图片位置-->
+			<div id="slider-images">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+
+		<ul id="slider-nav">
+			<!--手机模式下的翻页导航-->
+			<li><a href="#search"></a></li>
+			<li><a href="#find"></a></li>
+			<li><a href="#explore"></a></li>
+			<li><a href="#suggest"></a></li>
+		</ul>
+	</div>
+	   <!--最后一页-->
+		<section id="download">
+		<article>
+			<h2>我已蜕变，只为遇见美好的你。</h2>
+			<p class="my_pp tx_my_pp">我已蜕变，只为遇见美好的你。</p>
+			<figure class="my_figure">
+				<img src="img/dgf.png" alt="扫描下载" class="my_img1">
+				<figcaption>
+					<small>扫码下载</small>
+				</figcaption>
+			</figure>
+			<!--<figure class="my_figure">-->
+				<!--<img src="img/sdgsgd.png" alt="关注微博" class="my_img2">-->
+				<!--<figcaption>-->
+					<!--<small>关注微博</small>-->
+
+				<!--</figcaption>-->
+			<!--</figure>-->
+			<small class="my_small">
+				关注微信：松鼠记账Soonbook<br>
+				关注微博：松鼠记账<br><br>
+				公司地址：北京市西城区阜成门外大街2号万通新世界A1812<br>
+				联系电话：010-68060046&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱：service@soonbook.cn<br>
+				Copyright&nbsp;&copy; 北京慧米科技有限公司&nbsp;&nbsp;京ICP备08100902号-6</small>
+		</article>
+		<div id="illustration-02"></div>
+		</section>
+			</main>
+
+			<!--手机端最后一页-->
+			<footer id="footer">
+				<h3 class="my_h3">我已蜕变<br>只为遇见美好的你</h3>
+				<figure class="my_figure2">
+					<img src="img/dgf.png" alt="扫描下载" class="my_img1">
+					<figcaption>
+						<p style="color: white;font-size: 0.8em;">扫描下载</p>
+					</figcaption>
+				</figure>
+				<!--<figure class="my_figure3">-->
+					<!--<img src="img/sdgsgd.png" alt="关注微博" class="my_img2">-->
+					<!--<figcaption>-->
+
+						<!--<small>关注微博</small>-->
+					<!--</figcaption>-->
+				<!--</figure>-->
+				<p class="my_small2">公司地址：北京市西城区阜成门外大街2号万通新世界A1812<br>联系电话：010-68060046<br>邮箱：service@soonbook.cn<br>
+					Copyright&nbsp;&copy; 北京慧米科技有限公司<br>京ICP备08100902号-6</p>
+				<p class="footer-note">soonbook <a href="javascript:void (0)" target="_blank"></a>松鼠记账</p>
+			</footer>
+		</div>
+		<script src="build/js/all.js"></script>
+	</body>
+</html>

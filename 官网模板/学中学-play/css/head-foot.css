@@ -1,0 +1,169 @@
+/*head*/
+.head{
+	width: 100%;
+	height: 30px;
+	background: #949494;
+}
+.container>span{
+	display: inline-block;
+	line-height: 30px;
+	color: #FFFFFF;
+	font-size: 14px;
+	float: right;
+}
+.container>p{
+	display: inline-block;
+	line-height: 30px;
+	color: #FFFFFF;
+	font-size: 14px;
+	padding-left: 40px;
+	float: right;
+}
+/*head-detial*/
+.head-detial{
+	width: 100%;
+	height: auto;
+	margin: 20px auto;
+}
+.logo{
+	float: left;
+}
+.logo img{
+	width: 180px;
+	height: 60px;
+}
+.logo-text{
+	float: left;
+	width: 120px;
+	font-size: 30px;
+	color: #00a269;
+	margin:10px 0 0 20px;
+}
+/*nav*/
+.nav{
+	width: 100%;
+	height: 36px;
+	margin: 0 auto;
+	background-color:#03b980;
+}
+.nav ul{
+	float: left;
+}
+.nav ul li{
+	float: left;
+	line-height: 36px;
+	text-align: center;
+	cursor: pointer;
+	width: 120px;
+	font-size: 16px;
+}
+.nav ul li a{
+	color: #FFFFFF;
+}
+.search{
+	float: right;
+}
+.search input{
+	width: 180px;
+	height: 24px;
+	border: 1px solid #666;
+	margin-top: 6px;
+	float: left;
+}
+.search span{
+	width: 40px;
+	height: 26px;
+	border: none;
+	background: #00a269;
+	cursor: pointer;
+	float: left;
+	margin-top: 6px;
+}
+.search span img{
+	width: 24px;
+	height: 24px;
+	margin: 2px 0 0 6px;
+}
+.active{
+	background-color: #009e6c;
+}
+.nav ul li:hover{
+	background-color: #009e6c;
+}
+
+
+/*foot*/
+.foot{
+	width: 100%;
+	height: auto;
+	padding: 10px 0 16px 0;
+	background-color:#dedede ;
+}
+.foot-link{
+	margin:0 auto 10px auto;
+	height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+	text-align: center;
+}
+.foot-link span{
+	padding: 0 10px 0 0;
+	border-right: 2px solid #666666;
+}
+.foot p{
+	line-height: 24px;
+	font-size: 13px;
+	text-align: center;
+}
+/*float*/
+.float{
+	position: fixed;
+	height: auto;
+	right: 0;
+	bottom: 20%;
+	z-index: 1;
+}
+.float img{
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+}
+.float-list{
+	display: none;
+	position: fixed;
+	right: 0;
+	bottom: 20%;
+	z-index: 99;
+}
+.float-phone p{
+	display: none;
+	line-height: 48px;
+	color: #FFFFFF;
+	background: #333333;
+	font-size: 20px;
+	width: 160px;
+	position: absolute;
+	right: 48px;
+	top: 52px;
+	z-index: 99;
+	left: -150px;
+	text-align: center;
+	cursor: pointer;
+}
+.wx{
+	display: none;
+	width: 100px;
+	height: 100px;
+	background: url(../img/wechart.jpeg);
+	background-size: cover;
+	position: absolute;
+	bottom:5px;
+	right: 0;
+	left: -60px;
+}
+/*自适应 当屏小于1050时隐藏*/
+   @media screen and (max-width: 1050px) {
+			.float{
+				display: none;
+			}
+		}

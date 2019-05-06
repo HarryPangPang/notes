@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--页面介绍-->
+<meta name="description" content="遇到难题时，果断发布技能需求：邻居、师兄、蓝胖子……GoGet搬来的救兵将踩着七彩祥云出现。">
+<meta name="author" content="">
+<title>GOGet- 随时Get新技能</title>
+    <!--导航小图标-->
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<!--<link href="css/nivo-lightbox.css" rel="stylesheet" />-->
+<link href="css/animations.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+</head>
+<!--data-spy="scroll"就是导航的滚动监听-->
+<body id="page-top" data-spy="scroll">
+<?php
+switch ($_SERVER["HTTP_HOST"])
+{
+ case "m.goget.top": header("location:/m");
+ break;
+}
+?>
+<section class="hero" id="intro">
+    <div class="container">
+      <div class="row">
+        <div class="animatedParent">
+            <h1 class="animated fadeInDown"><img src="images/logo.png"></h1>
+            <p class="animated fadeInUp">让你随时随地与人共享兴趣的神奇应用</p>
+        </div>
+      </div>
+      <div class="row">
+          <div class="webshow"><a href="###" class="learn-more-btn btn-scroll">立即下载</a></div>
+          <div class="mobileshow"><div><a href="http://api.goget.top/admin/download" class="iphonebtn">iOS 下载</a></div><div><a href="http://api.goget.top/admin/download" class="androidbtn">Android下载</a></div></div>
+          <div class="webclickshow">
+              <div class="webclickshow-cont">
+                  <div class="webshow-left">
+                      <h3>直接下载</h3>
+                      <div class="iphonebtn"><a href="http://api.goget.top/admin/download">iOS 下载</a></div>
+                      <div class="androidbtn"><a href="http://api.goget.top/admin/download">Android下载</a></div>
+                  </div>
+                  <div class="webshow-right">
+                      <h3>扫描二维码下载</h3>
+                      <div class="webshow-qrcode"></div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="webshow-tips">也可在AppStore、豌豆荚 直接搜索“goget”</div>
+              </div>
+          </div>
+      </div>
+    </div>
+</section>
+<section  class="myservice home-section">
+    <div class="text-center">
+    <div class="container">
+    <div class="row animatedParent">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="animated rotateInDownLeft">
+                <div class="service-box">
+                    <div><img src="images/gethelp.png"></div>
+                    <h3><img src="images/gethelp_t.png" alt="获得帮助"></h3>
+                    <p class="text-left">遇到难题时，果断发布技能需求：邻居、师兄、蓝胖子……GoGet搬来的救兵将踩着七彩祥云出现。</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="animated rotateInDownLeft slow">
+                <div class="service-box">
+                    <div><img src="images/findwonderful.png"></div>
+                    <h3><img src="images/findwonderful_t.png" alt="发现精彩"></h3>
+                    <p class="text-left">发呆犯困时，GoGet帮你扫描附近技能达人：哪里有趣点哪里，新鲜人永远都有下一个爱好、机遇和挑战。</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="animated rotateInDownLeft slower">
+                <div class="service-box">
+                    <div><img src="images/richactivities.png"></div>
+                    <h3><img src="images/richactivities_t.png" alt="丰富生活"></h3>
+                    <p class="text-left">不想过无聊的周末，参与GoGet聚会，来这喝最冰镇的可乐，聊最犀利的话题，加入最有存在感的社团。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+<section id="works" class="myphone home-section text-center">
+    <div class="container">
+        <div class="text-center"><div class="myphone-tit">界面展示</div></div>
+        <div class="row animatedParent">
+            <div class="col-sm-12 col-md-12 col-lg-12" >
+                <div class="row gallery-item">
+                    <div class="col-xs-12 col-sm-6 col-md-3 animated fadeInUp">
+                        <div class="phonelist1">
+                            <div class="phonelist-icon"><img src="images/plane.png"></div>
+                            <div class="phonelist-des"><img src="images/phone_tit1.png" alt="发现附近技能达人"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 animated fadeInUp slow">
+                        <div class="phonelist2">
+                            <div class="phonelist-icon"><img src="images/brush.png"></div>
+                            <div class="phonelist-des"><img src="images/phone_tit2.png" alt="实时发布学习需求"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 animated fadeInUp slower">
+                        <div class="phonelist3">
+                            <div class="phonelist-icon"><img src="images/guitar.png"></div>
+                            <div class="phonelist-des"><img src="images/phone_tit3.png" alt="交换技能兴趣爱好"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 animated fadeInUp">
+                        <div class="phonelist4">
+                            <div class="phonelist-icon"><img src="images/comment.png"></div>
+                            <div class="phonelist-des"><img src="images/phone_tit4.png" alt="互评真实友好透明"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="mywish home-section nopadd-bot text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="animatedParent">
+                    <h2 class="animated bounceInDown mywish-tit">我们希望</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="mywish-cont">
+                <p>GoGet能让你不孤单，不懒惰，不吝分享，不惧未知；</p>
+                <p>在社交中成长，更有效的利用时间；</p>
+                <p>并对这个有趣的世界保持前进和充满热情；</p>
+                <p>能够在GoGet上遇见对方，成为你们想要的、更好的自己。</p>
+                <p>——  GoGet团队  ——</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="footer-logo"><span>GoGet</span></div>
+        <div class="footer-links">
+            <div>
+                <a href="www.goget.top"><img src="images/sina.png"></a>
+            </div>
+            <div>
+                <a href="mailto:361272245@qq.com"><img src="images/email.png"></a>
+            </div>
+            <div>
+                <a href="www.goget.top"><img src="images/qrcode.png"></a>
+            </div>
+        </div>
+        <div class="copyright"><p class="fl">Copyright © 2015 goget.top Inc. All Rights Reserved.</p><p class="fr">京ICP备15050640号</p></div>
+    </div>
+</footer>
+<script src="js/jquery.min.js"></script>	 
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/jquery.easing.min.js"></script>	-->
+<!--<script src="js/jquery.scrollTo.js"></script>-->
+<!--<script src="js/stellar.js"></script>-->
+<!--<script src="js/nivo-lightbox.min.js"></script>-->
+<script src="js/css3-animate-it.js"></script>
+<script>
+$(function(){
+    $(".hero .webshow>a").on('click',function(){$(".webclickshow").show();});
+    $(".webclickshow").on('click',function(){$(".webclickshow").hide();});
+    $(".webclickshow-cont").on('click',function(){return false;});
+});
+</script>
+</body>
+</html>
