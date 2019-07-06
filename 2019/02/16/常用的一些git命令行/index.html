@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 常用的一些git命令行 · HarryPang's Blog</title><meta name="description" content="常用的一些git命令行 - Harry Pang"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://github.com/ZhangQiangQQ/atom.xml" title="HarryPang's Blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/2019/01/11/关于我" target="_self" class="nav-list-link">关于我</a></li><li class="nav-list-item"><a href="https://github.com/ZhangQiangQQ/" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">常用的一些git命令行</h1><div class="post-info">2019年2月16日</div><div class="post-content"><h2 id="工作中常用的一些git命令行"><a href="#工作中常用的一些git命令行" class="headerlink" title="工作中常用的一些git命令行"></a>工作中常用的一些git命令行</h2><h4 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">四个库</th>
+<th style="text-align:right">四种文件状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">工作区</td>
+<td style="text-align:right">Unstracked(未被跟踪的)</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">Modified(有修改的，和本地仓库快照不同)</td>
+</tr>
+<tr>
+<td style="text-align:left">暂存区</td>
+<td style="text-align:right">staged(暂存状态)</td>
+</tr>
+<tr>
+<td style="text-align:left">本地仓库</td>
+<td style="text-align:right">Unmodify(未改动)</td>
+</tr>
+<tr>
+<td style="text-align:left">远程仓库</td>
+</tr>
+</tbody>
+</table>
+<h4 id="克隆代码仓库"><a href="#克隆代码仓库" class="headerlink" title="克隆代码仓库"></a>克隆代码仓库</h4><ul>
+<li><code>git clone 仓库地址</code></li>
+</ul>
+<p>远程地址为仓库地址</p>
+<hr>
+<h4 id="暂存区操作"><a href="#暂存区操作" class="headerlink" title="暂存区操作"></a>暂存区操作</h4><ul>
+<li><p><code>git add 文件名</code> 添加文件到暂存区</p>
+</li>
+<li><p><code>git add .</code> 添加所有（未被添加过但存在在仓库文件夹里的）文件到暂存区</p>
+</li>
+<li><p><code>git rm 文件名</code> 从暂存区删除文件,文件会被删除</p>
+</li>
+<li><p><code>git rm 文件名 -f</code> 从暂存区强制删除，文件会被删除</p>
+</li>
+<li><p><code>git rm 文件名 --cached</code> 从暂存区删除，但是文件不会被删除，状态变为Unstracked</p>
+</li>
+<li><p><code>git checkout -- 文件名</code> 从暂存区拉取文件覆盖到工作区</p>
+</li>
+<li><p><code>git reset HEAD 文件名</code> 从本地仓库拉取文件覆盖到暂存区</p>
+</li>
+<li><p><code>git mv &#39;oldName&#39; &#39;newName&#39;</code> 更改文件名</p>
+</li>
+<li><p><code>git status</code> 获取仓库状态，包含四个库和文件状态</p>
+</li>
+<li><p><code>git reset --hard HEAD^</code> 重置到上一个commit状态，覆盖staged和工作区</p>
+</li>
+<li><p><code>git reset --hard &lt;commitkey&gt;</code> 重置到对应commit版本，覆盖staged和工作区</p>
+</li>
+</ul>
+<h5 id="一些技巧"><a href="#一些技巧" class="headerlink" title="一些技巧"></a>一些技巧</h5><p><em>工作区误删文件（手动删除）</em><br><code>git checkout -- 文件名</code> </p>
+<p><em>暂存区误删文件，删除之后想恢复</em><br><code>git reset HEAD 文件名 + git checkout -- 文件名</code></p>
+<h4 id="本地仓库操作"><a href="#本地仓库操作" class="headerlink" title="本地仓库操作"></a>本地仓库操作</h4><ul>
+<li><p><code>git commit -m 提交描述信息</code> 将暂存区里的改动提交到本地仓库， -m 参数表示带入提交描述信息，不加命令行会打开vim在让你输入</p>
+</li>
+<li><p><code>git commit -a -m 提交描述信息</code> 将所有非Unstracked状态的文件改动提交到本地仓库，相当于<code>git add 改动文件 + git commit -m</code></p>
+</li>
+<li><p><code>git commit --amend</code> 补充上一次的提交</p>
+</li>
+</ul>
+<h4 id="远程仓库操作"><a href="#远程仓库操作" class="headerlink" title="远程仓库操作"></a>远程仓库操作</h4><ul>
+<li><p><code>git remote -v</code> 查看目前远程仓库地址</p>
+</li>
+<li><p><code>git remote add origin 远程仓库地址</code> 添加远程仓库地址，已经有了的话会失败</p>
+</li>
+<li><p><code>git remote origin</code> 删除远程仓库，解除关联</p>
+</li>
+<li><p><code>git remote set-url origin 远程仓库地址</code> 设置远程仓库地址，可覆盖</p>
+</li>
+<li><p><code>git push -u origin master</code> 推送本地仓库到远程仓库master分支，-u表示关联，之后可省略为<code>git push, git pull</code></p>
+</li>
+<li><p><code>git pull</code> 从远程仓库拉取到本地</p>
+</li>
+</ul>
+<h4 id="基础操作流程图-不包含全部"><a href="#基础操作流程图-不包含全部" class="headerlink" title="基础操作流程图(不包含全部)"></a>基础操作流程图(不包含全部)</h4><p><img src="https://img-blog.csdn.net/20140417113336421" alt="流程图"></p>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/02/26/React学习笔记/" class="prev">PREV</a><a href="/2019/02/09/webpack下build报错/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2019 <a href="https://github.com/ZhangQiangQQ">Harry Pang</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
